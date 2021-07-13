@@ -9,5 +9,7 @@ spec:
   - name: accountrestservice
     image: nginx
     imagePullPolicy: IfNotPresent
+    ports:
+        - containerPort: 9000
   nodeSelector:
     role: worker
