@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: accountrestservice
-    image: ptrck0321/accountrestservice
+    image: nginx
     imagePullPolicy: IfNotPresent
   nodeSelector:
     roles: worker
