@@ -10,4 +10,4 @@ spec:
     image: nginx
     imagePullPolicy: IfNotPresent
   nodeSelector:
-    roles: worker
+    role: worker
