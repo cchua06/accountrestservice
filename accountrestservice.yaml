@@ -6,12 +6,10 @@ metadata:
     env: test
 spec:
   replicas: 1 
-  nodeSelector:
-    roles: worker
+  selector:
+    matchLabels:
+      roles: worker
   spec:
     containers:
     - name: accountrestservice
       image: ptrck0321/accountrestservice
-      imagePullPolicy: IfNotPresent
-      ports:
-          - containerPort: 9000
