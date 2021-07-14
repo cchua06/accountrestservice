@@ -1,19 +1,13 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: accountrestservice
   labels:
     env: test
 spec:
-  replicas: 1 
-  selector:
-    matchLabels:
-      app: accountrestservice
-  template:
-    metadata:
-      labels:
-        app: accountrestservice
-  spec:
-    containers:
-    - name: accountrestservice
-      image: ptrck0321/accountrestservice
+  containers:
+  - name: nap-accountrestservice
+    image: ptrck0321/accountrestservice
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    roles: worker
